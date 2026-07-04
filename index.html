@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интерактивная карта связи - Правительство Амурской области</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo-title">
+        <div class="coat-of-arms">
+          <!-- ЗДЕСЬ ВАШ ГЕРБ В ФОРМАТЕ PNG -->
+          <img src="ping.png" alt="Герб Амурской области" width="60" height="70">
+        </div>
+        <div>
+          <h1>Правительство Амурской области</h1>
+          <p class="subtitle">Министерство цифрового развития и связи</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <p class="report-date">Отчет № 03.07</p>
+        <p class="report-date">по состоянию на 2026 год</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container main-container">
+      <section class="filters-section">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Поиск населенного пункта...">
+          <button id="searchButton">Найти</button>
+          <button id="resetButton" class="reset-btn">Сбросить</button>
+        </div>
+        <div class="operator-filters">
+          <span>Фильтр по операторам:</span>
+          <label><input type="checkbox" id="filterMTS" checked> МТС</label>
+          <label><input type="checkbox" id="filterMegaFon" checked> Мегафон</label>
+          <label><input type="checkbox" id="filterBeeline" checked> Билайн</label>
+          <label><input type="checkbox" id="filterTele2" checked> ТЕЛЕ-2</label>
+        </div>
+      </section>
+
+      <section class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Муниципальное образование</th>
+              <th>Населенный пункт</th>
+              <th>Население</th>
+              <th>Канал связи</th>
+              <th>WiFi</th>
+              <th>МТС</th>
+              <th>Мегафон</th>
+              <th>Билайн</th>
+              <th>ТЕЛЕ-2</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body">
+            <!-- Данные загружаются через JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="pagination-section">
+        <div class="pagination-controls">
+          <button id="prevPage" disabled>Назад</button>
+          <span id="pageInfo">Страница 1 из 1</span>
+          <button id="nextPage">Вперед</button>
+        </div>
+        <div class="total-info">
+          <span>Всего записей: <span id="totalRecords">0</span></span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <p>© 2026 Правительство Амурской области. Все права защищены.</p>
+      <p>Данные о покрытии сотовой связи предоставлены операторами.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

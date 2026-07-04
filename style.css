@@ -1,0 +1,361 @@
+/* style.css - Правительство Амурской области */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #1a2b4a;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #0a1e3c 0%, #1b3a6b 100%);
+  color: white;
+  padding: 20px 0;
+  border-bottom: 4px solid #d4a843;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.coat-of-arms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.coat-of-arms img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.report-date {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+  padding: 30px 0 40px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ===== FILTERS ===== */
+.filters-section {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid #d4a843;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 2;
+  min-width: 250px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccd7e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+  min-width: 180px;
+}
+
+.search-bar input:focus {
+  border-color: #1b3a6b;
+  box-shadow: 0 0 0 3px rgba(27, 58, 107, 0.15);
+}
+
+.search-bar button {
+  padding: 10px 24px;
+  background: #1b3a6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+
+.search-bar button:hover {
+  background: #0a1e3c;
+}
+
+.reset-btn {
+  background: #6c7a8d !important;
+}
+
+.reset-btn:hover {
+  background: #4a5a6f !important;
+}
+
+.operator-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #1a2b4a;
+  flex: 1;
+  min-width: 200px;
+}
+
+.operator-filters span {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.operator-filters label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.operator-filters input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #1b3a6b;
+  cursor: pointer;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 700px;
+}
+
+thead {
+  background: #e8edf4;
+  border-bottom: 2px solid #d4a843;
+}
+
+thead th {
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 700;
+  color: #0a1e3c;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  background: #e8edf4;
+  z-index: 10;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.15s;
+}
+
+tbody tr:hover {
+  background: #f7f9fc;
+}
+
+tbody td {
+  padding: 12px 12px;
+  vertical-align: middle;
+}
+
+tbody td:first-child {
+  font-weight: 600;
+  color: #1b3a6b;
+  text-align: center;
+}
+
+/* Стили для статусов связи */
+.status-4g {
+  color: #0f7b3a;
+  font-weight: 700;
+}
+.status-3g {
+  color: #b17b0e;
+  font-weight: 600;
+}
+.status-2g {
+  color: #b34a2a;
+  font-weight: 600;
+}
+.status-no {
+  color: #a0aab8;
+  font-weight: 500;
+}
+.status-none {
+  color: #b0b8c4;
+  font-style: italic;
+}
+
+/* ===== PAGINATION ===== */
+.pagination-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pagination-controls button {
+  padding: 8px 20px;
+  background: #e8edf4;
+  border: 1px solid #ccd7e6;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #1a2b4a;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background: #1b3a6b;
+  color: white;
+  border-color: #1b3a6b;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#pageInfo {
+  font-weight: 600;
+  color: #1a2b4a;
+  min-width: 130px;
+  text-align: center;
+}
+
+.total-info {
+  font-weight: 500;
+  color: #1a2b4a;
+  background: #eef2f7;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0a1e3c;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 20px 0;
+  border-top: 3px solid #d4a843;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h1 { font-size: 1.3rem; }
+  .header-container { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .header-right { text-align: left; width: 100%; }
+  .filters-section { flex-direction: column; align-items: stretch; }
+  .operator-filters { justify-content: flex-start; }
+  .pagination-section { flex-direction: column; align-items: center; }
+  .pagination-controls { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .logo-title { flex-direction: column; align-items: flex-start; }
+  .search-bar button { flex: 1; }
+  .coat-of-arms { width: 50px; height: 60px; }
+  .coat-of-arms img { max-height: 50px; }
+}
