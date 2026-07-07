@@ -3,7 +3,6 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
 // ===== КОНФИГУРАЦИЯ =====
-// Замените эти значения на свои!
 const SUPABASE_URL = 'https://ygmqrcxzkfcqqrgjrzzk.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_kZxd3SwneXpOFLZOnOVkSQ_9wZlJW5Z';
 
@@ -81,7 +80,7 @@ function renderTable(data) {
         <td><strong>${escapeHtml(row.settlement || '')}</strong></td>
         <td>${formatNumber(row.population)}</td>
         <td>${escapeHtml(row.communication_channel || '')}</td>
-        <td>${row.wifi ? '✅' : ''}</td>
+        <td>${row.wifi ? '✔' : ''}</td>
         <td>${formatStatus(row.mts)}</td>
         <td>${formatStatus(row.megafon)}</td>
         <td>${formatStatus(row.beeline)}</td>
@@ -120,7 +119,7 @@ function showError(message) {
   tbody.innerHTML = `
     <tr>
       <td colspan="10" style="text-align: center; padding: 40px; color: #b34a2a;">
-        <strong>⚠️ Ошибка</strong><br>
+        <strong>Ошибка</strong><br>
         <span>${message}</span>
       </td>
     </tr>
